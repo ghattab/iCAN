@@ -1,0 +1,279 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "autosize": "pad",
+  "padding": 5,
+  "width": 300,
+  "height": 585,
+  "style": "cell",
+  "title": {
+    "anchor": "middle",
+    "text": ["Performance of encoding groups. Color coding corresponds to the max F1-score of a group.", "The x-axis is arranged by clustering datasets, i.e., the biomedical application. The y-axis is", "organized by clustering sequence- and structure-based encodings.", ""]
+  },
+  "layout": {"columns": 2, "padding": {"column": -2, "row": -2}},
+  "data": [
+    {
+      "name": "hm_data",
+      "values": [{"Dataset": "amp_csamp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.9259259259, "sort_ds_idx": 0, "sort_en_idx": 0}, {"Dataset": "cpp_mixed", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 1, "sort_en_idx": 1}, {"Dataset": "cpp_sanders", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 2, "sort_en_idx": 2}, {"Dataset": "atb_antitbp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5816666667, "sort_ds_idx": 3, "sort_en_idx": 3}, {"Dataset": "ace_vaxinpad", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6181818182, "sort_ds_idx": 4, "sort_en_idx": 4}, {"Dataset": "atb_iantitb", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6132369994, "sort_ds_idx": 5, "sort_en_idx": 5}, {"Dataset": "cpp_mlcppue", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6193806194, "sort_ds_idx": 6, "sort_en_idx": 6}, {"Dataset": "amp_antibp2", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6153856614, "sort_ds_idx": 7, "sort_en_idx": 7}, {"Dataset": "cpp_kelmcpp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6222260157, "sort_ds_idx": 8, "sort_en_idx": 8}, {"Dataset": "amp_modlamp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7609657561, "sort_ds_idx": 9, "sort_en_idx": 9}, {"Dataset": "avp_avppred", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7667676402, "sort_ds_idx": 10, "sort_en_idx": 10}, {"Dataset": "cpp_cellppdmod", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7532450154, "sort_ds_idx": 11, "sort_en_idx": 11}, {"Dataset": "afp_amppred", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6603632906, "sort_ds_idx": 12, "sort_en_idx": 12}, {"Dataset": "avp_amppred", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6495030549, "sort_ds_idx": 13, "sort_en_idx": 13}, {"Dataset": "acp_anticp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7157894737, "sort_ds_idx": 14, "sort_en_idx": 14}, {"Dataset": "amp_iamp2l", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7089013458, "sort_ds_idx": 15, "sort_en_idx": 15}, {"Dataset": "amp_fernandes", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6666666667, "sort_ds_idx": 16, "sort_en_idx": 16}, {"Dataset": "hem_hemopi", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6960847934, "sort_ds_idx": 17, "sort_en_idx": 17}, {"Dataset": "amp_antibp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6849884008, "sort_ds_idx": 18, "sort_en_idx": 18}, {"Dataset": "cpp_cellppd", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6814583375, "sort_ds_idx": 19, "sort_en_idx": 19}, {"Dataset": "cpp_mlcpp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.3940982334, "sort_ds_idx": 20, "sort_en_idx": 20}, {"Dataset": "acp_iacp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4102564103, "sort_ds_idx": 21, "sort_en_idx": 21}, {"Dataset": "acp_mlacp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4033898305, "sort_ds_idx": 22, "sort_en_idx": 22}, {"Dataset": "afp_antifp", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5457900034, "sort_ds_idx": 23, "sort_en_idx": 23}, {"Dataset": "cpp_cppredfl", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5454545455, "sort_ds_idx": 24, "sort_en_idx": 24}, {"Dataset": "amp_gonzales", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5714285714, "sort_ds_idx": 25, "sort_en_idx": 25}, {"Dataset": "bce_ibce", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5168486058, "sort_ds_idx": 26, "sort_en_idx": 26}, {"Dataset": "aip_aippred", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4738095238, "sort_ds_idx": 27, "sort_en_idx": 27}, {"Dataset": "aip_antiinflam", "Encoding": "seqdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4705374384, "sort_ds_idx": 28, "sort_en_idx": 28}, {"Dataset": "amp_csamp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.9259259259, "sort_ds_idx": 29, "sort_en_idx": 29}, {"Dataset": "cpp_mixed", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 30, "sort_en_idx": 30}, {"Dataset": "cpp_sanders", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 31, "sort_en_idx": 31}, {"Dataset": "atb_antitbp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5816666667, "sort_ds_idx": 32, "sort_en_idx": 32}, {"Dataset": "ace_vaxinpad", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6181818182, "sort_ds_idx": 33, "sort_en_idx": 33}, {"Dataset": "atb_iantitb", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6132369994, "sort_ds_idx": 34, "sort_en_idx": 34}, {"Dataset": "cpp_mlcppue", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6193806194, "sort_ds_idx": 35, "sort_en_idx": 35}, {"Dataset": "amp_antibp2", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6153856614, "sort_ds_idx": 36, "sort_en_idx": 36}, {"Dataset": "cpp_kelmcpp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6222260157, "sort_ds_idx": 37, "sort_en_idx": 37}, {"Dataset": "amp_modlamp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7609657561, "sort_ds_idx": 38, "sort_en_idx": 38}, {"Dataset": "avp_avppred", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7667676402, "sort_ds_idx": 39, "sort_en_idx": 39}, {"Dataset": "cpp_cellppdmod", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7532450154, "sort_ds_idx": 40, "sort_en_idx": 40}, {"Dataset": "afp_amppred", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6603632906, "sort_ds_idx": 41, "sort_en_idx": 41}, {"Dataset": "avp_amppred", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6495030549, "sort_ds_idx": 42, "sort_en_idx": 42}, {"Dataset": "acp_anticp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7157894737, "sort_ds_idx": 43, "sort_en_idx": 43}, {"Dataset": "amp_iamp2l", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.7089013458, "sort_ds_idx": 44, "sort_en_idx": 44}, {"Dataset": "amp_fernandes", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6666666667, "sort_ds_idx": 45, "sort_en_idx": 45}, {"Dataset": "hem_hemopi", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6960847934, "sort_ds_idx": 46, "sort_en_idx": 46}, {"Dataset": "amp_antibp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6849884008, "sort_ds_idx": 47, "sort_en_idx": 47}, {"Dataset": "cpp_cellppd", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.6814583375, "sort_ds_idx": 48, "sort_en_idx": 48}, {"Dataset": "cpp_mlcpp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.3940982334, "sort_ds_idx": 49, "sort_en_idx": 49}, {"Dataset": "acp_iacp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4102564103, "sort_ds_idx": 50, "sort_en_idx": 50}, {"Dataset": "acp_mlacp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4033898305, "sort_ds_idx": 51, "sort_en_idx": 51}, {"Dataset": "afp_antifp", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5457900034, "sort_ds_idx": 52, "sort_en_idx": 52}, {"Dataset": "cpp_cppredfl", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5454545455, "sort_ds_idx": 53, "sort_en_idx": 53}, {"Dataset": "amp_gonzales", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5714285714, "sort_ds_idx": 54, "sort_en_idx": 54}, {"Dataset": "bce_ibce", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.5168486058, "sort_ds_idx": 55, "sort_en_idx": 55}, {"Dataset": "aip_aippred", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4738095238, "sort_ds_idx": 56, "sort_en_idx": 56}, {"Dataset": "aip_antiinflam", "Encoding": "strdiscretized_centered_levels_1_and_2_encoding", "F1": 0.4705374384, "sort_ds_idx": 57, "sort_en_idx": 57}, {"Dataset": "amp_csamp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.9183333333, "sort_ds_idx": 58, "sort_en_idx": 58}, {"Dataset": "cpp_mixed", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 59, "sort_en_idx": 59}, {"Dataset": "cpp_sanders", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 60, "sort_en_idx": 60}, {"Dataset": "atb_antitbp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5959987751, "sort_ds_idx": 61, "sort_en_idx": 61}, {"Dataset": "ace_vaxinpad", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6035714286, "sort_ds_idx": 62, "sort_en_idx": 62}, {"Dataset": "atb_iantitb", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6124542125, "sort_ds_idx": 63, "sort_en_idx": 63}, {"Dataset": "cpp_mlcppue", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6175514626, "sort_ds_idx": 64, "sort_en_idx": 64}, {"Dataset": "amp_antibp2", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6451612903, "sort_ds_idx": 65, "sort_en_idx": 65}, {"Dataset": "cpp_kelmcpp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6208711434, "sort_ds_idx": 66, "sort_en_idx": 66}, {"Dataset": "amp_modlamp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7680681109, "sort_ds_idx": 67, "sort_en_idx": 67}, {"Dataset": "avp_avppred", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7603305785, "sort_ds_idx": 68, "sort_en_idx": 68}, {"Dataset": "cpp_cellppdmod", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7545826899, "sort_ds_idx": 69, "sort_en_idx": 69}, {"Dataset": "afp_amppred", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.667239141, "sort_ds_idx": 70, "sort_en_idx": 70}, {"Dataset": "avp_amppred", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6464646465, "sort_ds_idx": 71, "sort_en_idx": 71}, {"Dataset": "acp_anticp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7078282828, "sort_ds_idx": 72, "sort_en_idx": 72}, {"Dataset": "amp_iamp2l", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7160136829, "sort_ds_idx": 73, "sort_en_idx": 73}, {"Dataset": "amp_fernandes", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6969387755, "sort_ds_idx": 74, "sort_en_idx": 74}, {"Dataset": "hem_hemopi", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6848977581, "sort_ds_idx": 75, "sort_en_idx": 75}, {"Dataset": "amp_antibp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6956521739, "sort_ds_idx": 76, "sort_en_idx": 76}, {"Dataset": "cpp_cellppd", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6905148894, "sort_ds_idx": 77, "sort_en_idx": 77}, {"Dataset": "cpp_mlcpp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4019704433, "sort_ds_idx": 78, "sort_en_idx": 78}, {"Dataset": "acp_iacp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.3464285714, "sort_ds_idx": 79, "sort_en_idx": 79}, {"Dataset": "acp_mlacp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.3673469388, "sort_ds_idx": 80, "sort_en_idx": 80}, {"Dataset": "afp_antifp", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.554841998, "sort_ds_idx": 81, "sort_en_idx": 81}, {"Dataset": "cpp_cppredfl", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5449631742, "sort_ds_idx": 82, "sort_en_idx": 82}, {"Dataset": "amp_gonzales", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 83, "sort_en_idx": 83}, {"Dataset": "bce_ibce", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5136146121, "sort_ds_idx": 84, "sort_en_idx": 84}, {"Dataset": "aip_aippred", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4837818106, "sort_ds_idx": 85, "sort_en_idx": 85}, {"Dataset": "aip_antiinflam", "Encoding": "seqdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4275724276, "sort_ds_idx": 86, "sort_en_idx": 86}, {"Dataset": "amp_csamp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.9183333333, "sort_ds_idx": 87, "sort_en_idx": 87}, {"Dataset": "cpp_mixed", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 88, "sort_en_idx": 88}, {"Dataset": "cpp_sanders", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 89, "sort_en_idx": 89}, {"Dataset": "atb_antitbp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5959987751, "sort_ds_idx": 90, "sort_en_idx": 90}, {"Dataset": "ace_vaxinpad", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6035714286, "sort_ds_idx": 91, "sort_en_idx": 91}, {"Dataset": "atb_iantitb", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6124542125, "sort_ds_idx": 92, "sort_en_idx": 92}, {"Dataset": "cpp_mlcppue", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6175514626, "sort_ds_idx": 93, "sort_en_idx": 93}, {"Dataset": "amp_antibp2", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6451612903, "sort_ds_idx": 94, "sort_en_idx": 94}, {"Dataset": "cpp_kelmcpp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6208711434, "sort_ds_idx": 95, "sort_en_idx": 95}, {"Dataset": "amp_modlamp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7680681109, "sort_ds_idx": 96, "sort_en_idx": 96}, {"Dataset": "avp_avppred", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7603305785, "sort_ds_idx": 97, "sort_en_idx": 97}, {"Dataset": "cpp_cellppdmod", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7545826899, "sort_ds_idx": 98, "sort_en_idx": 98}, {"Dataset": "afp_amppred", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.667239141, "sort_ds_idx": 99, "sort_en_idx": 99}, {"Dataset": "avp_amppred", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6464646465, "sort_ds_idx": 100, "sort_en_idx": 100}, {"Dataset": "acp_anticp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7078282828, "sort_ds_idx": 101, "sort_en_idx": 101}, {"Dataset": "amp_iamp2l", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.7160136829, "sort_ds_idx": 102, "sort_en_idx": 102}, {"Dataset": "amp_fernandes", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6969387755, "sort_ds_idx": 103, "sort_en_idx": 103}, {"Dataset": "hem_hemopi", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6848977581, "sort_ds_idx": 104, "sort_en_idx": 104}, {"Dataset": "amp_antibp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6956521739, "sort_ds_idx": 105, "sort_en_idx": 105}, {"Dataset": "cpp_cellppd", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.6905148894, "sort_ds_idx": 106, "sort_en_idx": 106}, {"Dataset": "cpp_mlcpp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4019704433, "sort_ds_idx": 107, "sort_en_idx": 107}, {"Dataset": "acp_iacp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.3464285714, "sort_ds_idx": 108, "sort_en_idx": 108}, {"Dataset": "acp_mlacp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.3673469388, "sort_ds_idx": 109, "sort_en_idx": 109}, {"Dataset": "afp_antifp", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.554841998, "sort_ds_idx": 110, "sort_en_idx": 110}, {"Dataset": "cpp_cppredfl", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5449631742, "sort_ds_idx": 111, "sort_en_idx": 111}, {"Dataset": "amp_gonzales", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 112, "sort_en_idx": 112}, {"Dataset": "bce_ibce", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.5136146121, "sort_ds_idx": 113, "sort_en_idx": 113}, {"Dataset": "aip_aippred", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4837818106, "sort_ds_idx": 114, "sort_en_idx": 114}, {"Dataset": "aip_antiinflam", "Encoding": "strdiscretized_shifted_levels_1_and_2_encoding", "F1": 0.4275724276, "sort_ds_idx": 115, "sort_en_idx": 115}, {"Dataset": "amp_csamp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.9285714286, "sort_ds_idx": 116, "sort_en_idx": 116}, {"Dataset": "cpp_mixed", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 117, "sort_en_idx": 117}, {"Dataset": "cpp_sanders", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 118, "sort_en_idx": 118}, {"Dataset": "atb_antitbp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.5849056604, "sort_ds_idx": 119, "sort_en_idx": 119}, {"Dataset": "ace_vaxinpad", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6094771242, "sort_ds_idx": 120, "sort_en_idx": 120}, {"Dataset": "atb_iantitb", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6038275624, "sort_ds_idx": 121, "sort_en_idx": 121}, {"Dataset": "cpp_mlcppue", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6012048193, "sort_ds_idx": 122, "sort_en_idx": 122}, {"Dataset": "amp_antibp2", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6130761464, "sort_ds_idx": 123, "sort_en_idx": 123}, {"Dataset": "cpp_kelmcpp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.626564149, "sort_ds_idx": 124, "sort_en_idx": 124}, {"Dataset": "amp_modlamp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.7253968766, "sort_ds_idx": 125, "sort_en_idx": 125}, {"Dataset": "avp_avppred", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.759436798, "sort_ds_idx": 126, "sort_en_idx": 126}, {"Dataset": "cpp_cellppdmod", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.7384506041, "sort_ds_idx": 127, "sort_en_idx": 127}, {"Dataset": "afp_amppred", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6489974937, "sort_ds_idx": 128, "sort_en_idx": 128}, {"Dataset": "avp_amppred", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6382351227, "sort_ds_idx": 129, "sort_en_idx": 129}, {"Dataset": "acp_anticp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.7083740632, "sort_ds_idx": 130, "sort_en_idx": 130}, {"Dataset": "amp_iamp2l", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.7060460155, "sort_ds_idx": 131, "sort_en_idx": 131}, {"Dataset": "amp_fernandes", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6863636364, "sort_ds_idx": 132, "sort_en_idx": 132}, {"Dataset": "hem_hemopi", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6666666667, "sort_ds_idx": 133, "sort_en_idx": 133}, {"Dataset": "amp_antibp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.670695195, "sort_ds_idx": 134, "sort_en_idx": 134}, {"Dataset": "cpp_cellppd", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.6783015835, "sort_ds_idx": 135, "sort_en_idx": 135}, {"Dataset": "cpp_mlcpp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.3797435897, "sort_ds_idx": 136, "sort_en_idx": 136}, {"Dataset": "acp_iacp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.3333333333, "sort_ds_idx": 137, "sort_en_idx": 137}, {"Dataset": "acp_mlacp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.3539130435, "sort_ds_idx": 138, "sort_en_idx": 138}, {"Dataset": "afp_antifp", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.5239823724, "sort_ds_idx": 139, "sort_en_idx": 139}, {"Dataset": "cpp_cppredfl", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.5642538315, "sort_ds_idx": 140, "sort_en_idx": 140}, {"Dataset": "amp_gonzales", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 141, "sort_en_idx": 141}, {"Dataset": "bce_ibce", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.5053788317, "sort_ds_idx": 142, "sort_en_idx": 142}, {"Dataset": "aip_aippred", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.46875, "sort_ds_idx": 143, "sort_en_idx": 143}, {"Dataset": "aip_antiinflam", "Encoding": "seqbinary_centered_levels_1_and_2_encoding", "F1": 0.4444501542, "sort_ds_idx": 144, "sort_en_idx": 144}, {"Dataset": "amp_csamp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.9285714286, "sort_ds_idx": 145, "sort_en_idx": 145}, {"Dataset": "cpp_mixed", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 146, "sort_en_idx": 146}, {"Dataset": "cpp_sanders", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 147, "sort_en_idx": 147}, {"Dataset": "atb_antitbp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.5849056604, "sort_ds_idx": 148, "sort_en_idx": 148}, {"Dataset": "ace_vaxinpad", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6094771242, "sort_ds_idx": 149, "sort_en_idx": 149}, {"Dataset": "atb_iantitb", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6038275624, "sort_ds_idx": 150, "sort_en_idx": 150}, {"Dataset": "cpp_mlcppue", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6012048193, "sort_ds_idx": 151, "sort_en_idx": 151}, {"Dataset": "amp_antibp2", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6130761464, "sort_ds_idx": 152, "sort_en_idx": 152}, {"Dataset": "cpp_kelmcpp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.626564149, "sort_ds_idx": 153, "sort_en_idx": 153}, {"Dataset": "amp_modlamp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.7253968766, "sort_ds_idx": 154, "sort_en_idx": 154}, {"Dataset": "avp_avppred", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.759436798, "sort_ds_idx": 155, "sort_en_idx": 155}, {"Dataset": "cpp_cellppdmod", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.7384506041, "sort_ds_idx": 156, "sort_en_idx": 156}, {"Dataset": "afp_amppred", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6489974937, "sort_ds_idx": 157, "sort_en_idx": 157}, {"Dataset": "avp_amppred", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6382351227, "sort_ds_idx": 158, "sort_en_idx": 158}, {"Dataset": "acp_anticp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.7083740632, "sort_ds_idx": 159, "sort_en_idx": 159}, {"Dataset": "amp_iamp2l", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.7060460155, "sort_ds_idx": 160, "sort_en_idx": 160}, {"Dataset": "amp_fernandes", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6863636364, "sort_ds_idx": 161, "sort_en_idx": 161}, {"Dataset": "hem_hemopi", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6666666667, "sort_ds_idx": 162, "sort_en_idx": 162}, {"Dataset": "amp_antibp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.670695195, "sort_ds_idx": 163, "sort_en_idx": 163}, {"Dataset": "cpp_cellppd", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.6783015835, "sort_ds_idx": 164, "sort_en_idx": 164}, {"Dataset": "cpp_mlcpp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.3797435897, "sort_ds_idx": 165, "sort_en_idx": 165}, {"Dataset": "acp_iacp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.3333333333, "sort_ds_idx": 166, "sort_en_idx": 166}, {"Dataset": "acp_mlacp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.3539130435, "sort_ds_idx": 167, "sort_en_idx": 167}, {"Dataset": "afp_antifp", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.5239823724, "sort_ds_idx": 168, "sort_en_idx": 168}, {"Dataset": "cpp_cppredfl", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.5642538315, "sort_ds_idx": 169, "sort_en_idx": 169}, {"Dataset": "amp_gonzales", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 170, "sort_en_idx": 170}, {"Dataset": "bce_ibce", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.5053788317, "sort_ds_idx": 171, "sort_en_idx": 171}, {"Dataset": "aip_aippred", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.46875, "sort_ds_idx": 172, "sort_en_idx": 172}, {"Dataset": "aip_antiinflam", "Encoding": "strbinary_centered_levels_1_and_2_encoding", "F1": 0.4444501542, "sort_ds_idx": 173, "sort_en_idx": 173}, {"Dataset": "amp_csamp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.9215384615, "sort_ds_idx": 174, "sort_en_idx": 174}, {"Dataset": "cpp_mixed", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 175, "sort_en_idx": 175}, {"Dataset": "cpp_sanders", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 176, "sort_en_idx": 176}, {"Dataset": "atb_antitbp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5937059143, "sort_ds_idx": 177, "sort_en_idx": 177}, {"Dataset": "ace_vaxinpad", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5931830676, "sort_ds_idx": 178, "sort_en_idx": 178}, {"Dataset": "atb_iantitb", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.604639086, "sort_ds_idx": 179, "sort_en_idx": 179}, {"Dataset": "cpp_mlcppue", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5945945946, "sort_ds_idx": 180, "sort_en_idx": 180}, {"Dataset": "amp_antibp2", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6243287671, "sort_ds_idx": 181, "sort_en_idx": 181}, {"Dataset": "cpp_kelmcpp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6157282881, "sort_ds_idx": 182, "sort_en_idx": 182}, {"Dataset": "amp_modlamp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.7133366861, "sort_ds_idx": 183, "sort_en_idx": 183}, {"Dataset": "avp_avppred", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.7581252138, "sort_ds_idx": 184, "sort_en_idx": 184}, {"Dataset": "cpp_cellppdmod", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.7453147795, "sort_ds_idx": 185, "sort_en_idx": 185}, {"Dataset": "afp_amppred", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6565418895, "sort_ds_idx": 186, "sort_en_idx": 186}, {"Dataset": "avp_amppred", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.636219895, "sort_ds_idx": 187, "sort_en_idx": 187}, {"Dataset": "acp_anticp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.695194508, "sort_ds_idx": 188, "sort_en_idx": 188}, {"Dataset": "amp_iamp2l", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.7089277342, "sort_ds_idx": 189, "sort_en_idx": 189}, {"Dataset": "amp_fernandes", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6947648625, "sort_ds_idx": 190, "sort_en_idx": 190}, {"Dataset": "hem_hemopi", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6683087028, "sort_ds_idx": 191, "sort_en_idx": 191}, {"Dataset": "amp_antibp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6708875977, "sort_ds_idx": 192, "sort_en_idx": 192}, {"Dataset": "cpp_cellppd", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.6791375291, "sort_ds_idx": 193, "sort_en_idx": 193}, {"Dataset": "cpp_mlcpp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.3721657754, "sort_ds_idx": 194, "sort_en_idx": 194}, {"Dataset": "acp_iacp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.3529411765, "sort_ds_idx": 195, "sort_en_idx": 195}, {"Dataset": "acp_mlacp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.3333333333, "sort_ds_idx": 196, "sort_en_idx": 196}, {"Dataset": "afp_antifp", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5366677022, "sort_ds_idx": 197, "sort_en_idx": 197}, {"Dataset": "cpp_cppredfl", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5416666667, "sort_ds_idx": 198, "sort_en_idx": 198}, {"Dataset": "amp_gonzales", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 199, "sort_en_idx": 199}, {"Dataset": "bce_ibce", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.5026316518, "sort_ds_idx": 200, "sort_en_idx": 200}, {"Dataset": "aip_aippred", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.4765567766, "sort_ds_idx": 201, "sort_en_idx": 201}, {"Dataset": "aip_antiinflam", "Encoding": "seqbinary_shifted_levels_1_and_2_encoding", "F1": 0.4131244141, "sort_ds_idx": 202, "sort_en_idx": 202}, {"Dataset": "amp_csamp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.9215384615, "sort_ds_idx": 203, "sort_en_idx": 203}, {"Dataset": "cpp_mixed", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.8636363636, "sort_ds_idx": 204, "sort_en_idx": 204}, {"Dataset": "cpp_sanders", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.862745098, "sort_ds_idx": 205, "sort_en_idx": 205}, {"Dataset": "atb_antitbp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5937059143, "sort_ds_idx": 206, "sort_en_idx": 206}, {"Dataset": "ace_vaxinpad", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5931830676, "sort_ds_idx": 207, "sort_en_idx": 207}, {"Dataset": "atb_iantitb", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.604639086, "sort_ds_idx": 208, "sort_en_idx": 208}, {"Dataset": "cpp_mlcppue", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5945945946, "sort_ds_idx": 209, "sort_en_idx": 209}, {"Dataset": "amp_antibp2", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6243287671, "sort_ds_idx": 210, "sort_en_idx": 210}, {"Dataset": "cpp_kelmcpp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6157282881, "sort_ds_idx": 211, "sort_en_idx": 211}, {"Dataset": "amp_modlamp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.7133366861, "sort_ds_idx": 212, "sort_en_idx": 212}, {"Dataset": "avp_avppred", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.7581252138, "sort_ds_idx": 213, "sort_en_idx": 213}, {"Dataset": "cpp_cellppdmod", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.7453147795, "sort_ds_idx": 214, "sort_en_idx": 214}, {"Dataset": "afp_amppred", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6565418895, "sort_ds_idx": 215, "sort_en_idx": 215}, {"Dataset": "avp_amppred", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.636219895, "sort_ds_idx": 216, "sort_en_idx": 216}, {"Dataset": "acp_anticp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.695194508, "sort_ds_idx": 217, "sort_en_idx": 217}, {"Dataset": "amp_iamp2l", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.7089277342, "sort_ds_idx": 218, "sort_en_idx": 218}, {"Dataset": "amp_fernandes", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6947648625, "sort_ds_idx": 219, "sort_en_idx": 219}, {"Dataset": "hem_hemopi", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6683087028, "sort_ds_idx": 220, "sort_en_idx": 220}, {"Dataset": "amp_antibp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6708875977, "sort_ds_idx": 221, "sort_en_idx": 221}, {"Dataset": "cpp_cellppd", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.6791375291, "sort_ds_idx": 222, "sort_en_idx": 222}, {"Dataset": "cpp_mlcpp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.3721657754, "sort_ds_idx": 223, "sort_en_idx": 223}, {"Dataset": "acp_iacp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.3529411765, "sort_ds_idx": 224, "sort_en_idx": 224}, {"Dataset": "acp_mlacp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.3333333333, "sort_ds_idx": 225, "sort_en_idx": 225}, {"Dataset": "afp_antifp", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5366677022, "sort_ds_idx": 226, "sort_en_idx": 226}, {"Dataset": "cpp_cppredfl", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5416666667, "sort_ds_idx": 227, "sort_en_idx": 227}, {"Dataset": "amp_gonzales", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5, "sort_ds_idx": 228, "sort_en_idx": 228}, {"Dataset": "bce_ibce", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.5026316518, "sort_ds_idx": 229, "sort_en_idx": 229}, {"Dataset": "aip_aippred", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.4765567766, "sort_ds_idx": 230, "sort_en_idx": 230}, {"Dataset": "aip_antiinflam", "Encoding": "strbinary_shifted_levels_1_and_2_encoding", "F1": 0.4131244141, "sort_ds_idx": 231, "sort_en_idx": 231}]
+    },
+    {
+      "name": "data_1",
+      "source": "hm_data",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum['F1'] !== null && !isNaN(datum['F1'])"
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "hm_data",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.F1 == null ? 'NA' : 'NA'",
+          "as": "F1_new"
+        },
+        {"type": "filter", "expr": "(datum.F1 === null)"}
+      ]
+    },
+    {
+      "name": "tree_hm1",
+      "values": [{"id": "1", "name": ""}, {"id": "2", "name": "", "parent": "1"}, {"id": "3", "name": "seqdiscretized_centered_levels_1_and_2_encoding", "parent": "2"}, {"id": "4", "name": "strdiscretized_centered_levels_1_and_2_encoding", "parent": "2"}, {"id": "5", "name": "", "parent": "1"}, {"id": "6", "name": "", "parent": "5"}, {"id": "7", "name": "seqdiscretized_shifted_levels_1_and_2_encoding", "parent": "6"}, {"id": "8", "name": "strdiscretized_shifted_levels_1_and_2_encoding", "parent": "6"}, {"id": "9", "name": "", "parent": "5"}, {"id": "10", "name": "", "parent": "9"}, {"id": "11", "name": "seqbinary_centered_levels_1_and_2_encoding", "parent": "10"}, {"id": "12", "name": "strbinary_centered_levels_1_and_2_encoding", "parent": "10"}, {"id": "13", "name": "", "parent": "9"}, {"id": "14", "name": "seqbinary_shifted_levels_1_and_2_encoding", "parent": "13"}, {"id": "15", "name": "strbinary_shifted_levels_1_and_2_encoding", "parent": "13"}],
+      "transform": [
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
+        {
+          "type": "tree",
+          "method": "cluster",
+          "size": [{"signal": "height"}, {"signal": "width - 100"}],
+          "separation": false,
+          "as": ["y", "x", "depth", "children"]
+        }
+      ]
+    },
+    {
+      "name": "links_hm1",
+      "source": "tree_hm1",
+      "transform": [
+        {"type": "treelinks"},
+        {"type": "linkpath", "orient": "horizontal", "shape": "orthogonal"}
+      ]
+    },
+    {
+      "name": "tree_hm2",
+      "values": [{"id": "1", "name": ""}, {"id": "2", "name": "", "parent": "1"}, {"id": "3", "name": "amp_csamp", "parent": "2"}, {"id": "4", "name": "", "parent": "2"}, {"id": "5", "name": "cpp_mixed", "parent": "4"}, {"id": "6", "name": "cpp_sanders", "parent": "4"}, {"id": "7", "name": "", "parent": "1"}, {"id": "8", "name": "", "parent": "7"}, {"id": "9", "name": "", "parent": "8"}, {"id": "10", "name": "atb_antitbp", "parent": "9"}, {"id": "11", "name": "", "parent": "9"}, {"id": "12", "name": "", "parent": "11"}, {"id": "13", "name": "ace_vaxinpad", "parent": "12"}, {"id": "14", "name": "", "parent": "12"}, {"id": "15", "name": "atb_iantitb", "parent": "14"}, {"id": "16", "name": "cpp_mlcppue", "parent": "14"}, {"id": "17", "name": "", "parent": "11"}, {"id": "18", "name": "amp_antibp2", "parent": "17"}, {"id": "19", "name": "cpp_kelmcpp", "parent": "17"}, {"id": "20", "name": "", "parent": "8"}, {"id": "21", "name": "", "parent": "20"}, {"id": "22", "name": "amp_modlamp", "parent": "21"}, {"id": "23", "name": "", "parent": "21"}, {"id": "24", "name": "avp_avppred", "parent": "23"}, {"id": "25", "name": "cpp_cellppdmod", "parent": "23"}, {"id": "26", "name": "", "parent": "20"}, {"id": "27", "name": "", "parent": "26"}, {"id": "28", "name": "afp_amppred", "parent": "27"}, {"id": "29", "name": "avp_amppred", "parent": "27"}, {"id": "30", "name": "", "parent": "26"}, {"id": "31", "name": "", "parent": "30"}, {"id": "32", "name": "acp_anticp", "parent": "31"}, {"id": "33", "name": "amp_iamp2l", "parent": "31"}, {"id": "34", "name": "", "parent": "30"}, {"id": "35", "name": "amp_fernandes", "parent": "34"}, {"id": "36", "name": "", "parent": "34"}, {"id": "37", "name": "hem_hemopi", "parent": "36"}, {"id": "38", "name": "", "parent": "36"}, {"id": "39", "name": "amp_antibp", "parent": "38"}, {"id": "40", "name": "cpp_cellppd", "parent": "38"}, {"id": "41", "name": "", "parent": "7"}, {"id": "42", "name": "", "parent": "41"}, {"id": "43", "name": "cpp_mlcpp", "parent": "42"}, {"id": "44", "name": "", "parent": "42"}, {"id": "45", "name": "acp_iacp", "parent": "44"}, {"id": "46", "name": "acp_mlacp", "parent": "44"}, {"id": "47", "name": "", "parent": "41"}, {"id": "48", "name": "", "parent": "47"}, {"id": "49", "name": "", "parent": "48"}, {"id": "50", "name": "afp_antifp", "parent": "49"}, {"id": "51", "name": "cpp_cppredfl", "parent": "49"}, {"id": "52", "name": "", "parent": "48"}, {"id": "53", "name": "amp_gonzales", "parent": "52"}, {"id": "54", "name": "bce_ibce", "parent": "52"}, {"id": "55", "name": "", "parent": "47"}, {"id": "56", "name": "aip_aippred", "parent": "55"}, {"id": "57", "name": "aip_antiinflam", "parent": "55"}],
+      "transform": [
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
+        {
+          "type": "tree",
+          "method": "cluster",
+          "size": [{"signal": "height"}, {"signal": "width - 100"}],
+          "separation": false
+        }
+      ]
+    },
+    {
+      "name": "links_hm2",
+      "source": "tree_hm2",
+      "transform": [
+        {"type": "treelinks"},
+        {"type": "linkpath", "orient": "vertical", "shape": "orthogonal"}
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "name": "col_dendrogram_placeholder",
+      "marks": [
+        {
+          "type": "path",
+          "from": {"data": "links_hm2"},
+          "encode": {
+            "update": {
+              "scaleX": {"value": 0.34},
+              "path": {"field": "path"},
+              "stroke": {"value": "white"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "col_dendrogram",
+      "title": {
+        "text": "Dataset",
+        "fontWeight": "normal",
+        "fontSize": 12
+      },
+      "marks": [
+        {
+          "type": "path",
+          "from": {"data": "links_hm2"},
+          "encode": {
+            "update": {
+              "scaleX": {"value": 0.6444444444444445},
+              "path": {"field": "path"},
+              "stroke": {"value": "#ccc"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "row_dendrogram_hm1",
+      "title": {
+        "text": "Encoding",
+        "orient": "left",
+        "fontWeight": "normal",
+        "fontSize": 12
+      },
+      "marks": [
+        {
+          "type": "path",
+          "from": {"data": "links_hm1"},
+          "encode": {
+            "update": {
+              "scaleY": {"value": 0.17777777777777778},
+              "path": {"field": "path"},
+              "stroke": {"value": "#ccc"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "hm1",
+      "marks": [
+        {
+          "name": "layer_0_marks",
+          "type": "rect",
+          "style": ["rect"],
+          "from": {"data": "data_1"},
+          "encode": {
+            "update": {
+              "fill": {"scale": "layer_0_color", "field": "F1"},
+              "tooltip": {
+                "signal": "{'Encoding': ''+datum['Encoding'], 'Dataset': ''+datum['Dataset'], 'F1': format(datum['F1'], '')}"
+              },
+              "x": {"scale": "x", "field": "Dataset"},
+              "width": {"scale": "x", "band": true},
+              "y": {"scale": "y", "field": "Encoding"},
+              "height": {"scale": "y", "band": true}
+            }
+          }
+        },
+        {
+          "name": "layer_1_marks",
+          "type": "rect",
+          "style": ["rect"],
+          "from": {"data": "data_2"},
+          "encode": {
+            "update": {
+              "fill": {"scale": "layer_1_color", "field": "F1_new"},
+              "x": {"scale": "x", "field": "Dataset"},
+              "width": {"value": 13},
+              "y": {"scale": "y", "field": "Encoding"},
+              "height": {"value": 13}
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "y",
+      "type": "band",
+      "domain": {
+        "fields": [
+          {"data": "hm_data", "field": "Encoding"},
+          {"data": "data_2", "field": "Encoding"}
+        ],
+        "sort": false
+      },
+      "range": {"step": 13},
+      "paddingInner": 0,
+      "paddingOuter": 0
+    },
+    {
+      "name": "x",
+      "type": "band",
+      "domain": {
+        "fields": [
+          {"data": "hm_data", "field": "Dataset"},
+          {"data": "data_2", "field": "Dataset"}
+        ],
+        "sort": false
+      },
+      "range": {"step": 13},
+      "paddingInner": 0,
+      "paddingOuter": 0
+    },
+    {
+      "name": "layer_0_color",
+      "type": "linear",
+      "domain": [0, 1],
+      "range": ["#a6bddb", "#023858"],
+      "interpolate": "hcl",
+      "zero": true
+    },
+    {
+      "name": "layer_1_color",
+      "type": "ordinal",
+      "domain": ["NA"],
+      "range": ["#a6611a"]
+    }
+  ],
+  "axes": [
+    {
+      "scale": "y",
+      "orient": "right",
+      "grid": false,
+      "zindex": 1,
+      "offset": 277,
+      "position": 200
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "labelBaseline": "middle",
+      "labelAlign":"right",
+      "labelAngle": -45,
+      "zindex": 1,
+      "position": 200,
+      "offset": -281
+    }
+  ],
+  "legends": [
+    {
+      "fill": "layer_0_color",
+      "gradientLength": {"signal": "clamp(height, 64, 200)"},
+      "symbolType": "square",
+      "title": "F1",
+      "offset": 20,
+      "orient":"none",
+      "legendX": 637,
+      "legendY": 200,
+      "titleFontSize": 12,
+      "labelFontSize": 12
+    },
+    {
+      "title": "Value",
+      "fill": "layer_1_color",
+      "gradientLength": {"signal": "clamp(height, 64, 200)"},
+      "symbolType": "square",
+      "orient":"none",
+      "legendX": 637,
+      "legendY": 425,
+      "titleFontSize": 12,
+      "labelFontSize": 12
+    }
+  ],
+  "config": {"style": {"cell": {"stroke": "transparent"}}},
+  "background": "white"
+}

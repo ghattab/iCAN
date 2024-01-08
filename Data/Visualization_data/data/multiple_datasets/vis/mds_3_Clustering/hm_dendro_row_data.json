@@ -1,0 +1,76 @@
+[
+  {
+    "name": "",
+    "id": "1"
+  },
+  {
+    "name": "",
+    "id": "2",
+    "parent": "1"
+  },
+  {
+    "name": "seqdiscretized_centered_levels_1_and_2_encoding",
+    "id": "3",
+    "parent": "2"
+  },
+  {
+    "name": "strdiscretized_centered_levels_1_and_2_encoding",
+    "id": "4",
+    "parent": "2"
+  },
+  {
+    "name": "",
+    "id": "5",
+    "parent": "1"
+  },
+  {
+    "name": "",
+    "id": "6",
+    "parent": "5"
+  },
+  {
+    "name": "seqdiscretized_shifted_levels_1_and_2_encoding",
+    "id": "7",
+    "parent": "6"
+  },
+  {
+    "name": "strdiscretized_shifted_levels_1_and_2_encoding",
+    "id": "8",
+    "parent": "6"
+  },
+  {
+    "name": "",
+    "id": "9",
+    "parent": "5"
+  },
+  {
+    "name": "",
+    "id": "10",
+    "parent": "9"
+  },
+  {
+    "name": "seqbinary_centered_levels_1_and_2_encoding",
+    "id": "11",
+    "parent": "10"
+  },
+  {
+    "name": "strbinary_centered_levels_1_and_2_encoding",
+    "id": "12",
+    "parent": "10"
+  },
+  {
+    "name": "",
+    "id": "13",
+    "parent": "9"
+  },
+  {
+    "name": "seqbinary_shifted_levels_1_and_2_encoding",
+    "id": "14",
+    "parent": "13"
+  },
+  {
+    "name": "strbinary_shifted_levels_1_and_2_encoding",
+    "id": "15",
+    "parent": "13"
+  }
+]
