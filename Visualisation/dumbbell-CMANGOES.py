@@ -100,33 +100,33 @@ results_path_CMANGOES = os.path.join('..', 'Results', 'CMANGOES', file_CMANGOES)
 CMANGOES_f1 = pd.read_csv(results_path_CMANGOES, index_col=0)
 CMANGOES_f1 = CMANGOES_f1.loc[dataset_selection]
 
-file_CENACT = 'f1_score_level_2_data_driven.csv'
-results_path_CENACT = os.path.join('..', 'Results', 'csv', file_CENACT)
+file_iCAN = 'f1_score_level_2_data_driven.csv'
+results_path_iCAN = os.path.join('..', 'Results', 'csv', file_iCAN)
 
-CENACT_f1 = pd.read_csv(results_path_CENACT, index_col=0)
-CENACT_f1 = CENACT_f1.loc[dataset_selection]
+iCAN_f1 = pd.read_csv(results_path_iCAN, index_col=0)
+iCAN_f1 = iCAN_f1.loc[dataset_selection]
 
-list_of_datasets = CENACT_f1.index
+list_of_datasets = iCAN_f1.index
 
 fig, ax = plt.subplots(figsize=(19, 18))
 
-df = pd.DataFrame(index=list_of_datasets, columns=['Dataset','CENACT','CMANGOES'])
+df = pd.DataFrame(index=list_of_datasets, columns=['Dataset','iCAN','CMANGOES'])
 
 for dataset_idx in range(len(list_of_datasets)):
     dataset = list_of_datasets[dataset_idx]
     CMANGOES_f1_score = max_median(CMANGOES_f1, dataset)
-    CENACT_f1_score = max_median(CENACT_f1, dataset)
+    iCAN_f1_score = max_median(iCAN_f1, dataset)
     df.loc[dataset, 'Dataset'] = dataset
     df.loc[dataset, 'CMANGOES'] = CMANGOES_f1_score
-    df.loc[dataset, 'CENACT'] = CENACT_f1_score
+    df.loc[dataset, 'iCAN'] = iCAN_f1_score
 
-df = df.sort_values(by='CENACT', ascending=True)
+df = df.sort_values(by='iCAN', ascending=True)
 df = df.reset_index(drop=True)
 
 for i in df.index:
-    ax.plot([df.loc[i,'CMANGOES'], df.loc[i,'CENACT']], [i,i], color = 'black', linewidth = 2)
+    ax.plot([df.loc[i,'CMANGOES'], df.loc[i,'iCAN']], [i,i], color = 'black', linewidth = 2)
     ax.plot([df.loc[i,'CMANGOES'], df.loc[i,'CMANGOES']], [i,i], marker ='o', color=rki_orange, markersize=10)
-    ax.plot([df.loc[i,'CENACT'], df.loc[i,'CENACT']], [i,i], marker ='o', color=rki_blue, markersize=10)
+    ax.plot([df.loc[i,'iCAN'], df.loc[i,'iCAN']], [i,i], marker ='o', color=rki_blue, markersize=10)
 
 ax.set_yticks(range(0, len(list_of_datasets)))
 ax.set_yticklabels(df['Dataset'])
@@ -137,7 +137,7 @@ plt.ylim(-1,len(dataset_selection))
 plt.grid(axis = 'x')
 
 CMANGOES_patch = mpatches.Patch(color=rki_orange, label='Baseline (CMANGOES)')
-CENACT_patch = mpatches.Patch(color=rki_blue, label='Alternative (CENACT)')
-plt.legend(handles=[CENACT_patch, CMANGOES_patch], fontsize = 'xx-large')
+iCAN_patch = mpatches.Patch(color=rki_blue, label='Alternative (iCAN)')
+plt.legend(handles=[iCAN_patch, CMANGOES_patch], fontsize = 'xx-large')
 plt.subplots_adjust(top=0.95, right=0.95)
 plt.savefig('./dumbbell-CMANGOES.png', dpi=300)

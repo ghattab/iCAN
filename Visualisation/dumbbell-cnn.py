@@ -82,41 +82,41 @@ rki_blue = RKI_colors[0]
 rki_grey = RKI_colors[1]
 rki_orange = RKI_colors[-1]
 
-file_CENACT_cnn = 'f1_score_level_2_with_hydrogen.csv'
-results_path_CENACT_cnn = os.path.join('..', 'Results', 'CNN', file_CENACT_cnn)
+file_iCAN_cnn = 'f1_score_level_2_with_hydrogen.csv'
+results_path_iCAN_cnn = os.path.join('..', 'Results', 'CNN', file_iCAN_cnn)
 
-CENACT_cnn_f1 = pd.read_csv(results_path_CENACT_cnn, index_col=0)
-CENACT_cnn_f1 = CENACT_cnn_f1.loc[dataset_selection]
+iCAN_cnn_f1 = pd.read_csv(results_path_iCAN_cnn, index_col=0)
+iCAN_cnn_f1 = iCAN_cnn_f1.loc[dataset_selection]
 
-file_CENACT = 'f1_score_level_2_with_hydrogen.csv'
-results_path_CENACT = os.path.join('..', 'Results', 'csv', file_CENACT)
+file_iCAN = 'f1_score_level_2_with_hydrogen.csv'
+results_path_iCAN = os.path.join('..', 'Results', 'csv', file_iCAN)
 
-CENACT_f1 = pd.read_csv(results_path_CENACT, index_col=0)
-CENACT_f1 = CENACT_f1.loc[dataset_selection]
+iCAN_f1 = pd.read_csv(results_path_iCAN, index_col=0)
+iCAN_f1 = iCAN_f1.loc[dataset_selection]
 
-list_of_datasets = CENACT_f1.index
+list_of_datasets = iCAN_f1.index
 
 fig, ax = plt.subplots(figsize=(18, 18))
 
-df = pd.DataFrame(index=list_of_datasets, columns=['Dataset','CENACT','CENACT_cnn'])
+df = pd.DataFrame(index=list_of_datasets, columns=['Dataset','iCAN','iCAN_cnn'])
 
 for dataset_idx in range(len(list_of_datasets)):
     dataset = list_of_datasets[dataset_idx]
-    CENACT_cnn_f1_score = max_median(CENACT_cnn_f1, dataset, 1)
-    CENACT_f1_score = max_median(CENACT_f1, dataset)
+    iCAN_cnn_f1_score = max_median(iCAN_cnn_f1, dataset, 1)
+    iCAN_f1_score = max_median(iCAN_f1, dataset)
     df.loc[dataset, 'Dataset'] = dataset
-    df.loc[dataset, 'CENACT_cnn'] = CENACT_cnn_f1_score
-    df.loc[dataset, 'CENACT'] = CENACT_f1_score
+    df.loc[dataset, 'iCAN_cnn'] = iCAN_cnn_f1_score
+    df.loc[dataset, 'iCAN'] = iCAN_f1_score
 
-df = df.sort_values(by='CENACT', ascending=True)
+df = df.sort_values(by='iCAN', ascending=True)
 df = df.reset_index(drop=True)
 
 for i in df.index:
-    ax.plot([df.loc[i,'CENACT_cnn'], df.loc[i,'CENACT']], [i,i], color = 'black', linewidth = 2)
-    ax.plot([df.loc[i,'CENACT_cnn'], df.loc[i,'CENACT_cnn']], [i,i], marker ='o', color=rki_blue, markersize=10)
-    ax.plot([df.loc[i,'CENACT'], df.loc[i,'CENACT']], [i,i], marker ='o', color=rki_grey, markersize=10)
+    ax.plot([df.loc[i,'iCAN_cnn'], df.loc[i,'iCAN']], [i,i], color = 'black', linewidth = 2)
+    ax.plot([df.loc[i,'iCAN_cnn'], df.loc[i,'iCAN_cnn']], [i,i], marker ='o', color=rki_blue, markersize=10)
+    ax.plot([df.loc[i,'iCAN'], df.loc[i,'iCAN']], [i,i], marker ='o', color=rki_grey, markersize=10)
     
-#plt.title('Comparison of f1-scores of CMANGOES encodings and CENACT encoding\n10 medians taken over CV-split with k=5, max median reported', fontsize = 20)
+#plt.title('Comparison of f1-scores of CMANGOES encodings and iCAN encoding\n10 medians taken over CV-split with k=5, max median reported', fontsize = 20)
 ax.set_yticks(range(0, len(list_of_datasets)))
 ax.set_yticklabels(df['Dataset'])
 plt.xlabel('f1-scores')
@@ -125,8 +125,8 @@ plt.xlim(0,1)
 plt.ylim(-1,len(dataset_selection))
 plt.grid(axis = 'x')
 
-CENACT_cnn_patch = mpatches.Patch(color=rki_blue, label='CENACT with Convolutional Neural Network')
-CENACT_patch = mpatches.Patch(color=rki_grey, label='CENACT with Random Forest Classifier')
-plt.legend(handles=[CENACT_patch, CENACT_cnn_patch], fontsize = 'xx-large')
+iCAN_cnn_patch = mpatches.Patch(color=rki_blue, label='iCAN with Convolutional Neural Network')
+iCAN_patch = mpatches.Patch(color=rki_grey, label='iCAN with Random Forest Classifier')
+plt.legend(handles=[iCAN_patch, iCAN_cnn_patch], fontsize = 'xx-large')
 
 plt.savefig('./dumbbell_cnn.png', dpi=300)

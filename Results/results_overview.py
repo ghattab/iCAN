@@ -194,17 +194,17 @@ def best_encoding(df):
     return df
 
 
-df_hyd = prepare_dataframe('f1_score_level_2_with_hydrogen.csv', 'cenact_hyd')
-df_nohyd = prepare_dataframe('f1_score_level_2_without_hydrogen.csv', 'cenact_nohyd')
-df_dd = prepare_dataframe('f1_score_level_2_data_driven.csv', 'cenact_dd')
+df_hyd = prepare_dataframe('f1_score_level_2_with_hydrogen.csv', 'ican_hyd')
+df_nohyd = prepare_dataframe('f1_score_level_2_without_hydrogen.csv', 'ican_nohyd')
+df_dd = prepare_dataframe('f1_score_level_2_data_driven.csv', 'ican_dd')
 
 df_comb = pd.concat([df_hyd, df_nohyd, df_dd]).reset_index(drop=True)
 df_comb = best_encoding(df_comb)
 df_comb = df_comb[['Dataset', 'Encoding', 'Encoding_max', 'F1', 'type', 'is_imbalanced', 'bio_field']]
-df_comb.to_csv('./CENACT_f1_score_overview.csv', index=False)
+df_comb.to_csv('./iCAN_f1_score_overview.csv', index=False)
 
 json_data = df_comb.to_json(orient = 'records')
 
 # Save the JSON string as a file
-with open('../Data/Visualization_data/data/multiple_datasets/vis/mds_1_Overview/hm_cenact_data.json', 'w') as file:
+with open('../Data/Visualization_data/data/multiple_datasets/vis/mds_1_Overview/hm_ican_data.json', 'w') as file:
     file.write(json_data)

@@ -81,7 +81,7 @@ for data_idx in range(len(dataset_selection)):
     dataset = dataset_selection[data_idx]
     print("Running dataset", data_idx + 1, "/", len(dataset_selection))
 
-    enc_path = os.path.join('..', 'Data', 'Encodings', dataset, 'CENACT_level_2_with_hydrogen.csv')
+    enc_path = os.path.join('..', 'Data', 'Encodings', dataset, 'iCAN_level_2_with_hydrogen.csv')
     classes_path = os.path.join('..', 'Data', 'Original_datasets', dataset, 'classes.txt')
     save_path = os.path.join('.', 'Importance_heatmaps', dataset + '.jpg')
     save_path_zoom = os.path.join('.', 'Importance_heatmaps', dataset + '_zoom.jpg')

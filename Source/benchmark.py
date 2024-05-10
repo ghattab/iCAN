@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import pathlib
-import cenact
+import ican
 from timeit import default_timer as timer
 import numpy as np
 
@@ -28,7 +28,7 @@ def benchmark():
         if os.path.exists(encoding_data_path) == False:
             os.mkdir(encoding_data_path)
 
-        smiles_list = cenact.convert_fasta_to_smiles(fasta_path, smiles_path)
+        smiles_list = ican.convert_fasta_to_smiles(fasta_path, smiles_path)
 
         for level in [1,2]:
             for alphabet_mode in ['without_hydrogen', 'with_hydrogen', 'data_driven']:
@@ -36,11 +36,11 @@ def benchmark():
                 col_name = 'level_' + str(level) + '_' + alphabet_mode
                 runtimes_list = []
                 for run in range(runs):
-                    output_path = os.path.join('.', 'DELETE', 'CENACT_level_' + str(level) + '_' + alphabet_mode + '.csv')
+                    output_path = os.path.join('.', 'DELETE', 'iCAN_level_' + str(level) + '_' + alphabet_mode + '.csv')
 
                     timer_start = timer()
 
-                    cenact.cenact_encode(smiles_list, level=level, generate_imgs=False, alphabet_mode=alphabet_mode,
+                    ican.ican_encode(smiles_list, level=level, generate_imgs=False, alphabet_mode=alphabet_mode,
                                         print_progress=False, output_path=output_path,
                                         foldername_encoding_vis='Novel_Encodings_Visualisation')
                 
@@ -48,7 +48,7 @@ def benchmark():
 
                     runtime = timer_end - timer_start
                     runtimes_list.append(runtime)
-                    os.remove(os.path.join('.', 'DELETE', 'CENACT_level_' + str(level) + '_' + alphabet_mode + '.csv'))
+                    os.remove(os.path.join('.', 'DELETE', 'iCAN_level_' + str(level) + '_' + alphabet_mode + '.csv'))
                 
                 median_runtime = np.median(runtimes_list)
                 benchmark_df.loc[str(dataset).split("/")[-1], col_name] = median_runtime

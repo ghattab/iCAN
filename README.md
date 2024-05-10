@@ -61,7 +61,7 @@ The example datasets which are used to evaluate iCAN are collected from the [pep
 |Script|Description|
 |---|---|
 |[Source/](./Source/)|contains all scripts necessary to run the tool.
-|[Source/cenact.py](./Source/cenact.py)|contains the code that creates the iCAN encoding.
+|[Source/ican.py](./Source/ican.py)|contains the code that creates the iCAN encoding.
 |[Source/encoding.py](./Source/encoding.py)|contains the code that encodes all datasets in Data folder.
 |[Source/rfc_with_cv.py](./Source/rfc_with_cv.py)|contains the code that does training and prediction based on the encoded datasets using Random Forest Classifiers with Cross-Validation splits.
 |[Source/benchmark.py](./Source/benchmark.py)|contains the code that benchmarks the runtime of the algorithm.
@@ -78,16 +78,16 @@ The example datasets which are used to evaluate iCAN are collected from the [pep
 |[Visualisation/benchmark.ipynb](./Visualisation/benchmark.ipynb)|contains the code that visualises the runtime of the encoding in relation to the original file size using a scatterplot.
 
 ## Running the encoding for a single dataset
-Place yourself in the [Source](./Source) directory, then run the following command `python cenact.py --help` to see how to run the tool for a single dataset. The output of this option is presented here:
+Place yourself in the [Source](./Source) directory, then run the following command `python ican.py --help` to see how to run the tool for a single dataset. The output of this option is presented here:
 
 ```
-usage: CENACT [-h]
+usage: iCAN [-h]
               [--alphabet_mode {without_hydrogen,with_hydrogen,data_driven}]
               [--level LEVEL] [--image {0,1}] [--show_graph SHOW_GRAPH]
               [--output_path OUTPUT_PATH]
               input_file
               
-CENACT - Carbon-based Encoding of Neighbourhoods with Atom Count Tables
+iCAN - Carbon-based Encoding of Neighbourhoods with Atom Count Tables
 
 positional arguments:
   input_file            A required path-like argument
@@ -122,7 +122,7 @@ optional arguments:
   --output_path OUTPUT_PATH
                         An optional path-like argument. For parsed paths, the
                         directory must exist beforehand. Default:
-                        ./CENACT_Encodings
+                        ./iCAN_Encodings
 ```
 
 ## Running the encoding and prediction pipeline for all datasets

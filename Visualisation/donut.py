@@ -98,8 +98,8 @@ fig = plt.gcf()
 fig.gca().add_artist(centre_circle)
  
 # Adding Title of chart
-plt.title('Significant differences in F1-scores between\nAlternative (CENACT) and Baseline (CMANGOES)', fontsize = 25, y=-0.01)
-patch_1 = mpatches.Patch(color=RKI_colors_reduced[0], label='Alternative (CENACT) significantly\nbetter (95% confidence)')
+plt.title('Significant differences in F1-scores between\nAlternative (iCAN) and Baseline (CMANGOES)', fontsize = 25, y=-0.01)
+patch_1 = mpatches.Patch(color=RKI_colors_reduced[0], label='Alternative (iCAN) significantly\nbetter (95% confidence)')
 patch_2 = mpatches.Patch(color=RKI_colors_reduced[1], label='No significant difference')
 patch_3 = mpatches.Patch(color=RKI_colors_reduced[2], label='Baseline (CMANGOES) significantly\nbetter (95% confidence)')
 plt.legend(handles=[patch_1, patch_2, patch_3], fontsize = 'medium', loc = 'upper left', bbox_to_anchor = (-0.65,1.13))

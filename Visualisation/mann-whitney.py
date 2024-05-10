@@ -42,6 +42,6 @@ for row_idx in range(len(df1)):
     p_alpha_list.append(p_value < alpha)
 
 
-p_value_alpha_df = pd.DataFrame({'columns': index, 'p-value': p_list, 'CENACT significantly better than CMANGOES?': p_alpha_list})
+p_value_alpha_df = pd.DataFrame({'columns': index, 'p-value': p_list, 'iCAN significantly better than CMANGOES?': p_alpha_list})
 
 p_value_alpha_df.to_csv('./Visualisation/p_value_alpha05_dis-shi_dd2.csv', index=0, header=True)

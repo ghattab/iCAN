@@ -349,7 +349,7 @@ def generate_imgs_from_encoding(normalized_encoding, print_progress=False, folde
         for l in range(1, level):
             plt.axline((0, l * len(element_alphabet) - 0.5), slope=0., linewidth=2, linestyle='dashed', color='black')
 
-        subdir_name = os.path.join(dir_name, 'CENACT_level_' + str(level) + '_' + alphabet_mode)
+        subdir_name = os.path.join(dir_name, 'iCAN_level_' + str(level) + '_' + alphabet_mode)
         create_dir(subdir_name)
         filename = os.path.join(subdir_name, str(name) + '.jpg')
 
@@ -361,9 +361,9 @@ def generate_imgs_from_encoding(normalized_encoding, print_progress=False, folde
     return None
 
 
-def csv_export_cenact(normalized_encoding, output_path='encoding.csv'):
+def csv_export_ican(normalized_encoding, output_path='encoding.csv'):
     """
-    csv_export function exports the normalized encodings in a csv file.
+    csv_export_ican function exports the normalized encodings in a csv file.
 
     Args:
         normalized_encoding (dict): This dictionary contains the normalized
@@ -402,8 +402,8 @@ def get_data_driven_element_alphabet(smiles_list):
     return element_alphabet
 
 
-def cenact_encode(smiles_list, level, generate_imgs=False, alphabet_mode='without_hydrogen', print_progress=False,
-                  output_path=None, foldername_encoding_vis='./CENACT_Encodings_Visualisation'):
+def ican_encode(smiles_list, level, generate_imgs=False, alphabet_mode='without_hydrogen', print_progress=False,
+                  output_path=None, foldername_encoding_vis='./iCAN_Encodings_Visualisation'):
     if alphabet_mode == 'with_hydrogen':
         element_alphabet = ['H', 'C', 'N', 'O', 'S']
     elif alphabet_mode == 'data_driven':
@@ -433,13 +433,13 @@ def cenact_encode(smiles_list, level, generate_imgs=False, alphabet_mode='withou
         generate_imgs_from_encoding(enc_dict, print_progress=print_progress, foldername=foldername_encoding_vis,
                                     level=level, alphabet_mode=alphabet_mode, element_alphabet=element_alphabet)
 
-    csv_export_cenact(padd_dict, output_path=output_path)
+    csv_export_ican(padd_dict, output_path=output_path)
     return None
 
 
 def main():
-    program_name = 'CENACT'
-    program_description = '''CENACT - Carbon-based Encoding of Neighbourhoods with Atom Count Tables'''
+    program_name = 'iCAN'
+    program_description = '''iCAN - Interpretable Molecular Encodings and Representations for Machine Learning Tasks'''
 
     input_help = 'A required path-like argument'
 
@@ -466,7 +466,7 @@ def main():
                  shall be created and placed in the corresponding images folder.
                  '''
 
-    output_dir_name = "CENACT_Encodings"
+    output_dir_name = "iCAN_Encodings"
 
     output_path = os.path.join('.', output_dir_name)
     output_help = '''An optional path-like argument. For parsed paths, the directory must exist beforehand.
@@ -531,14 +531,14 @@ def main():
     # STEP 2: Define important variables. Also get the number of sequences in
     # a file. Do conversion to SMILES format if FASTA is provided as an input
     print('\n============================================================')
-    print('                           CENACT                           ')
+    print('                           iCAN                            ')
     print('============================================================')
 
     generate_imgs = True if arguments.image == 1 else False
     level = arguments.level
     alphabet_mode = arguments.alphabet_mode
 
-    output_path = os.path.join(output_dir, 'CENACT_level_' + str(level) + '_' + alphabet_mode + '.csv')
+    output_path = os.path.join(output_dir, 'iCAN_level_' + str(level) + '_' + alphabet_mode + '.csv')
 
     if input_file_extension in ['.smi', '.smiles']:
         input_smiles_path = arguments.input_file
@@ -559,9 +559,10 @@ def main():
 
     # STEP 4: Encode and export molecules
     # Possibly generate images and the graph, if selected
-    cenact_encode(smiles_list, level=level, generate_imgs=generate_imgs, alphabet_mode=alphabet_mode,
-                  print_progress=False, output_path=output_path,
-                  foldername_encoding_vis='CENACT_Encodings_Visualisation')
+    ican_encode(smiles_list, level=level, generate_imgs=generate_imgs,
+                alphabet_mode=alphabet_mode, print_progress=False,
+                output_path=output_path,
+                foldername_encoding_vis='iCAN_Encodings_Visualisation')
 
     print('============================================================\n')
 

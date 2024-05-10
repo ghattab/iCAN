@@ -63,7 +63,7 @@ for level in [2]:
             dataset = datasets_list[data_idx]
             print("Running dataset", data_idx + 1, "/", len(datasets_list), flush=True)
 
-            enc_path = os.path.join('..', 'Data', 'Encodings', dataset, 'CENACT_level_' + str(level) + '_' + alphabet_mode + '.csv')
+            enc_path = os.path.join('..', 'Data', 'Encodings', dataset, 'iCAN_level_' + str(level) + '_' + alphabet_mode + '.csv')
             classes_path = os.path.join('..', 'Data', 'Original_datasets', dataset, 'classes.txt')
 
             X = pd.read_csv(enc_path)
